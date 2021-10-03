@@ -12,8 +12,10 @@ body {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  // background-size: 100%;
   background-attachment: fixed;
+  background-size: cover;
+  // background-attachment: local;
 }
 
 #navbar{
@@ -52,7 +54,7 @@ body {
 
 #navbar input {
   border-style: groove;
-  background: url("search.jpg") no-repeat right;
+  background: url("../images/search.jpg") no-repeat right;
 } 
 
 /* раздел контента*/
