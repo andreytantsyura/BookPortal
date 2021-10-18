@@ -1,8 +1,4 @@
 @charset "UTF-8";
-
-// @import url("/css/dark-theme-colors.scss");
-@import url("/css/light-theme-colors.css");
-
 /* общие семейство и цвет шрифта*/
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -10,38 +6,37 @@
 }
 
 body {
-  margin: 0px;  /* сброс внешних отступов*/
-  // background-color: #e6e6e6;  /* цвет фона страницы */
-
-  background-image: url($background-image);
+  margin: 0px;
+  /* сброс внешних отступов*/
+  background-image: url("../images/background_dark_theme_1.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  // background-size: 100%;
   background-attachment: fixed;
   background-size: cover;
-  // background-attachment: local;
 }
 
-#navbar{
+#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-
-  border-bottom: 1px solid rgb(37, 37, 37);
-  background-color: $navbar-color;  
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #252525;
+  background-color: #313131;
   font-size: 16px;
   position: fixed;
   top: 0px;
   width: 100%;
 }
 
-#navbar ul, #content{
+#navbar ul, #content {
   padding: 0 130px 0 130px;
 }
 
-.navbar-item li{
+.navbar-item li {
   display: inline;
   padding-right: 15px;
-  // padding: 0 15px 0 0;
 }
 
 #navbar a {
@@ -49,23 +44,26 @@ body {
 }
 
 #navbar a, input, li {
-  color: $nanbar-text-color;
+  color: #edebff;
 }
 
 #navbar a:hover {
-	color: $navbar-text-hover-color;
+  color: #aba4f3;
 }
 
 #navbar input {
   border-style: groove;
   background: url("../images/search.jpg") no-repeat right;
-} 
+}
 
 /* раздел контента*/
 #content {
   margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .compilation {
@@ -77,28 +75,31 @@ body {
   font-size: 24px;
 }
 
-.compilation-horizontal-list, .compilation-vertical-list{
+.compilation-horizontal-list, .compilation-vertical-list {
   background: rgba(173, 173, 173, 0.192);
   border-radius: 4px;
   border-width: 2px;
-  box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+  -webkit-box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+          box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
 }
 
-.compilation-horizontal-list{
+.compilation-horizontal-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   word-wrap: wrap;
 }
 
-.compilation-vertical-list{
+.compilation-vertical-list {
   padding: 10px;
 }
 
-.preview img{
+.preview img {
   width: 128px;
   height: 184px;
 }
 
-.preview-mini img{
+.preview-mini img {
   width: 124px;
   height: 178px;
 }
@@ -106,18 +107,18 @@ body {
 .preview {
   margin: 10px;
   width: 130px;
-  
-  a {
-    font-weight: 900;
-    text-align: justify;
-  }
 }
 
-a{
+.preview a {
+  font-weight: 900;
+  text-align: justify;
+}
+
+a {
   text-decoration: none;
 }
 
-.book-genre, .book-author, .book-title, .book-price{
+.book-genre, .book-author, .book-title, .book-price {
   padding: 0px 0px 4px 3px;
 }
 
@@ -132,21 +133,23 @@ a{
 .preview-mini {
   padding-bottom: 15px;
   width: 299px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-
- 
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .preview-mini-desc {
   padding: 5px 0 0 5px;
 }
 
-.book-new-price{
-  color: $new-price-color;
+.book-new-price {
+  color: #94e2ae;
 }
 
-.book-old-price{
-  color: $testVar2; 
+.book-old-price {
+  color: #e29494;
   text-decoration: line-through;
 }
+/*# sourceMappingURL=styles.css.map */
