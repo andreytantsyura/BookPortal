@@ -1,4 +1,11 @@
 @charset "UTF-8";
+:root {
+  --red-hue: 360;
+  --blue-hue: 240;
+  --green-hue: 120;
+  --main-hue: var(--red-hue);
+}
+
 /* общие семейство и цвет шрифта*/
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -8,7 +15,7 @@
 body {
   margin: 0px;
   /* сброс внешних отступов*/
-  background-image: url("../images/background2.jpg");
+  background-image: url("../images/background_dark_theme_2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -22,8 +29,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #afc1ce;
-  background-color: rgb(57, 101, 136);
+  border-bottom: 1px solid #252525;
+  background-color: #242424;
   font-size: 16px;
   position: fixed;
   top: 0px;
@@ -44,16 +51,22 @@ body {
 }
 
 #navbar a, input, li {
-  color: #ffffff;
+  color: #d6bf4e;
 }
 
 #navbar a:hover {
-  color: rgb(250, 197, 117);
+  color: #aba4f3;
 }
 
-#navbar input {
+#searchline {
   border-style: groove;
   background: url("../images/search.jpg") no-repeat right;
+}
+
+#toggle-theme {
+  border-radius: 2px;
+  border-color: #aba4f3;
+  background-color: #8b8b8b;
 }
 
 /* раздел контента*/
@@ -81,6 +94,7 @@ body {
   border-width: 2px;
   -webkit-box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
           box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+  background-color: #9d9ab850;
 }
 
 .compilation-horizontal-list {
@@ -152,4 +166,8 @@ a {
   color: #e29494;
   text-decoration: line-through;
 }
-/*# sourceMappingURL=styles.css.map */
+
+#button-theme-mode {
+  size: 50px, 50px;
+}
+/*# sourceMappingURL=styles_dark.css.map */

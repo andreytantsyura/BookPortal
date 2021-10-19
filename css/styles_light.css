@@ -8,7 +8,7 @@
 body {
   margin: 0px;
   /* сброс внешних отступов*/
-  background-image: url("../images/background_dark_theme_1.jpg");
+  background-image: url("../images/background_dark_theme_2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #252525;
-  background-color: #313131;
+  background-color: #396588;
   font-size: 16px;
   position: fixed;
   top: 0px;
@@ -48,12 +48,18 @@ body {
 }
 
 #navbar a:hover {
-  color: #aba4f3;
+  color: #fac575;
 }
 
-#navbar input {
+#searchline {
   border-style: groove;
   background: url("../images/search.jpg") no-repeat right;
+}
+
+#toggle-theme {
+  border-radius: 2px;
+  border-color: #fac575;
+  background-color: #8b8b8b;
 }
 
 /* раздел контента*/
@@ -81,6 +87,7 @@ body {
   border-width: 2px;
   -webkit-box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
           box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+  background-color: #9d9ab850;
 }
 
 .compilation-horizontal-list {
@@ -152,4 +159,8 @@ a {
   color: #e29494;
   text-decoration: line-through;
 }
-/*# sourceMappingURL=styles.css.map */
+
+#button-theme-mode {
+  size: 50px, 50px;
+}
+/*# sourceMappingURL=styles_light.css.map */
