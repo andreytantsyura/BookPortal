@@ -1,33 +1,44 @@
 @charset "UTF-8";
 
-// @import url("/css/dark-theme-colors.scss");
-@import url("/css/light-theme-colors.css");
+:root{
+  --navbar-color: #5d65db;
+  --navbar-text-color: #f5efef;
+  --navbar-text-hover-color:#685a3e;
+  
+  --navbar-search-border-color: gray;
+  --navbar-search-text-color: #a7a6a6;
+  --navbar-search-back-color: #5d65db;
+  --navbar-search-img: url("../images/search_light.jpg");
+  
+  --main-text-color: #f5efef;
+  --background-img: url("../images/mountains_blue.jpg");
+  --compilation-background-color: #9d9ab850;
+  // --compilation-background-color: #9d9ab850;
+}
 
 /* общие семейство и цвет шрифта*/
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #cfcfcf;
 }
 
 body {
   margin: 0px;  /* сброс внешних отступов*/
-  // background-color: #e6e6e6;  /* цвет фона страницы */
 
-  background-image: url($background-image);
+  background-image: var(--background-img);
   background-repeat: no-repeat;
   background-position: center;
-  // background-size: 100%;
   background-attachment: fixed;
   background-size: cover;
-  // background-attachment: local;
+
+  color: var(--main-text-color);
 }
 
 #navbar{
   display: flex;
   justify-content: space-between;
-
+  color:var(--navbar-text-color);
   border-bottom: 1px solid rgb(37, 37, 37);
-  background-color: $navbar-color;  
+  background-color: var(--navbar-color);  
   font-size: 16px;
   position: fixed;
   top: 0px;
@@ -41,7 +52,6 @@ body {
 .navbar-item li{
   display: inline;
   padding-right: 15px;
-  // padding: 0 15px 0 0;
 }
 
 #navbar a {
@@ -49,17 +59,39 @@ body {
 }
 
 #navbar a, input, li {
-  color: $nanbar-text-color;
+  color: var(--nanbar-text-color);
 }
 
 #navbar a:hover {
-	color: $navbar-text-hover-color;
+	color: var(--navbar-text-hover-color);
 }
 
-#navbar input {
-  border-style: groove;
-  background: url("../images/search.jpg") no-repeat right;
-} 
+#searchline, ::-webkit-input-placeholder{
+  color: var(--navbar-search-text-color);
+  font-size: 16px;
+}
+
+#searchline{
+  // border-style:double;
+  // border-style:unset;
+  padding-right: 10px;
+
+  border-style:solid;
+  border-radius: 1px;
+  border-spacing: 0px;
+  border-width: 1px;
+  border-color: rgb(145, 147, 219);
+  
+  background: url("../images/search_light.png") no-repeat right;
+  background-position-x: 98%;
+  background-size: 16px, 16px;
+  background-color: var(--navbar-search-back-color);
+}
+
+#theme-switcher{
+  margin: 0px;
+  padding: 0px;
+}
 
 /* раздел контента*/
 #content {
@@ -82,6 +114,7 @@ body {
   border-radius: 4px;
   border-width: 2px;
   box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+  background-color: var(--compilation-background-color);
 }
 
 .compilation-horizontal-list{
@@ -115,6 +148,7 @@ body {
 
 a{
   text-decoration: none;
+  color: var(--main-text-color)
 }
 
 .book-genre, .book-author, .book-title, .book-price{
@@ -133,9 +167,7 @@ a{
   padding-bottom: 15px;
   width: 299px;
   display: flex;
-  flex-wrap: wrap;
-
- 
+  flex-wrap: wrap; 
 }
 
 .preview-mini-desc {
@@ -143,10 +175,10 @@ a{
 }
 
 .book-new-price{
-  color: $new-price-color;
+  color: var(--new-price-color);
 }
 
 .book-old-price{
-  color: $testVar2; 
+  color: var(--old-price-color); 
   text-decoration: line-through;
 }

@@ -1,20 +1,31 @@
 @charset "UTF-8";
+:root {
+  --navbar-color: #5d65db;
+  --navbar-text-color: #f5efef;
+  --navbar-text-hover-color:#685a3e;
+  --navbar-search-border-color: gray;
+  --navbar-search-text-color: #a7a6a6;
+  --navbar-search-back-color: #5d65db;
+  --navbar-search-img: url("../images/search_light.jpg");
+  --main-text-color: #f5efef;
+  --background-img: url("../images/mountains_blue.jpg");
+  --compilation-background-color: #9d9ab850;
+}
+
 /* общие семейство и цвет шрифта*/
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #cfcfcf;
 }
 
 body {
   margin: 0px;
   /* сброс внешних отступов*/
-  /* background-image: url("../images/background2.jpg"); */
-  background-image: url("../images/background2.jpg");
- 
+  background-image: var(--background-img);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  color: var(--main-text-color);
 }
 
 #navbar {
@@ -24,8 +35,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #afc1ce;
-  background-color: rgb(57, 101, 136);
+  color: var(--navbar-text-color);
+  border-bottom: 1px solid #252525;
+  background-color: var(--navbar-color);
   font-size: 16px;
   position: fixed;
   top: 0px;
@@ -46,16 +58,34 @@ body {
 }
 
 #navbar a, input, li {
-  color: #ffffff;
+  color: var(--nanbar-text-color);
 }
 
 #navbar a:hover {
-  color: rgb(250, 197, 117);
+  color: var(--navbar-text-hover-color);
 }
 
-#navbar input {
-  border-style: groove;
-  background: url("../images/search.jpg") no-repeat right;
+#searchline, ::-webkit-input-placeholder {
+  color: var(--navbar-search-text-color);
+  font-size: 16px;
+}
+
+#searchline {
+  padding-right: 10px;
+  border-style: solid;
+  border-radius: 1px;
+  border-spacing: 0px;
+  border-width: 1px;
+  border-color: #9193db;
+  background: url("../images/search_light.png") no-repeat right;
+  background-position-x: 98%;
+  background-size: 16px, 16px;
+  background-color: var(--navbar-search-back-color);
+}
+
+#theme-switcher {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* раздел контента*/
@@ -83,6 +113,7 @@ body {
   border-width: 2px;
   -webkit-box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
           box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+  background-color: var(--compilation-background-color);
 }
 
 .compilation-horizontal-list {
@@ -118,6 +149,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--main-text-color);
 }
 
 .book-genre, .book-author, .book-title, .book-price {
@@ -147,11 +179,11 @@ a {
 }
 
 .book-new-price {
-  color: #94e2ae;
+  color: var(--new-price-color);
 }
 
 .book-old-price {
-  color: #e29494;
+  color: var(--old-price-color);
   text-decoration: line-through;
 }
 /*# sourceMappingURL=styles.css.map */
