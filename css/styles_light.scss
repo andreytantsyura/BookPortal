@@ -1,13 +1,23 @@
 @charset "UTF-8";
 
-$new-price-color: rgb(148, 226, 174);
-$old-price-color: rgb(226, 148, 148);
+// :root{
+//   --new-price-color: rgb(148, 226, 174);
+//   --old-price-color:rgb(226, 148, 148);
+//   --navbar-color: rgb(57, 101, 136);
+//   --nanbar-text-color: #edebff;
+//   --navbar-text-hover-color: rgb(250, 197, 117);
+//   --background-image: "../images/background2.jpg";
+//   --compilation-background-color: #9d9ab850;  
+// }
+
+
 $navbar-color: rgb(57, 101, 136);
 $nanbar-text-color: #edebff;
 $navbar-text-hover-color: rgb(250, 197, 117);
 $background-image: "../images/background2.jpg";
 $compilation-background-color: #9d9ab850;  
-
+$new-price-color: rgb(148, 226, 174);
+$old-price-color: rgb(226, 148, 148);
 
 /* общие семейство и цвет шрифта*/
 * {

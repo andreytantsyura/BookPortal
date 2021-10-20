@@ -1,31 +1,25 @@
 @charset "UTF-8";
 
 :root{
-  --red-hue: 360;
-  --blue-hue: 240;
-  --green-hue: 120;
-  --main-hue : var(--red-hue);
+  --navbar-color: #5d65db;
+  --navbar-text-color: #f5efef;
+  --nav-bar-input-border-color: gray;
+  --navbar-text-hover-color:#f1d495;
+  --background-img: url("../images/mountains_blue.jpg");
+  --compilation-background-color: #9d9ab850;
 }
-
-$navbar-color: #242424;
-$nanbar-text-color: #d6bf4e;
-$navbar-text-hover-color: #aba4f3;  
-$background-image: "../images/background_dark_theme_2.jpg";
-$compilation-background-color: #9d9ab850;  
-$new-price-color: rgb(148, 226, 174);
-$old-price-color: rgb(226, 148, 148);
 
 /* общие семейство и цвет шрифта*/
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #cfcfcf;
+  color:var(--navbar-text-color);
 }
 
 body {
   margin: 0px;  /* сброс внешних отступов*/
   // background-color: #e6e6e6;  /* цвет фона страницы */
 
-  background-image: url("../images/background_dark_theme_2.jpg");
+  background-image: var(--background-img);
   background-repeat: no-repeat;
   background-position: center;
   // background-size: 100%;
@@ -39,7 +33,7 @@ body {
   justify-content: space-between;
 
   border-bottom: 1px solid rgb(37, 37, 37);
-  background-color: $navbar-color;  
+  background-color: var(--navbar-color);  
   font-size: 16px;
   position: fixed;
   top: 0px;
@@ -60,11 +54,11 @@ body {
 }
 
 #navbar a, input, li {
-  color: $nanbar-text-color;
+  color: var(--nanbar-text-color);
 }
 
 #navbar a:hover {
-	color: $navbar-text-hover-color;
+	color: var(--navbar-text-hover-color);
 }
 
 #searchline{
@@ -72,10 +66,9 @@ body {
   background: url("../images/search.jpg") no-repeat right;
 }
 
-#toggle-theme {
-  border-radius: 2px;
-  border-color: $navbar-text-hover-color;
-  background-color: rgb(139, 139, 139) ;
+#theme-switcher{
+  margin: 0px;
+  padding: 0px;
 }
 
 /* раздел контента*/
@@ -99,7 +92,7 @@ body {
   border-radius: 4px;
   border-width: 2px;
   box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
-  background-color: $compilation-background-color;
+  background-color: var(--compilation-background-color);
 }
 
 .compilation-horizontal-list{
@@ -159,11 +152,11 @@ a{
 }
 
 .book-new-price{
-  color: $new-price-color;
+  color: var(--new-price-color);
 }
 
 .book-old-price{
-  color: $old-price-color; 
+  color: var(--old-price-color); 
   text-decoration: line-through;
 }
 

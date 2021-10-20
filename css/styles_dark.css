@@ -1,21 +1,23 @@
 @charset "UTF-8";
 :root {
-  --red-hue: 360;
-  --blue-hue: 240;
-  --green-hue: 120;
-  --main-hue: var(--red-hue);
+  --navbar-color: #5d65db;
+  --navbar-text-color: #f5efef;
+  --nav-bar-input-border-color: gray;
+  --navbar-text-hover-color:#f1d495;
+  --background-img: url("../images/mountains_blue.jpg");
+  --compilation-background-color: #9d9ab850;
 }
 
 /* общие семейство и цвет шрифта*/
 * {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #cfcfcf;
+  color: var(--navbar-text-color);
 }
 
 body {
   margin: 0px;
   /* сброс внешних отступов*/
-  background-image: url("../images/background_dark_theme_2.jpg");
+  background-image: var(--background-img);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -30,7 +32,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 1px solid #252525;
-  background-color: #242424;
+  background-color: var(--navbar-color);
   font-size: 16px;
   position: fixed;
   top: 0px;
@@ -51,11 +53,11 @@ body {
 }
 
 #navbar a, input, li {
-  color: #d6bf4e;
+  color: var(--nanbar-text-color);
 }
 
 #navbar a:hover {
-  color: #aba4f3;
+  color: var(--navbar-text-hover-color);
 }
 
 #searchline {
@@ -63,10 +65,9 @@ body {
   background: url("../images/search.jpg") no-repeat right;
 }
 
-#toggle-theme {
-  border-radius: 2px;
-  border-color: #aba4f3;
-  background-color: #8b8b8b;
+#theme-switcher {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* раздел контента*/
@@ -94,7 +95,7 @@ body {
   border-width: 2px;
   -webkit-box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
           box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
-  background-color: #9d9ab850;
+  background-color: var(--compilation-background-color);
 }
 
 .compilation-horizontal-list {
@@ -159,11 +160,11 @@ a {
 }
 
 .book-new-price {
-  color: #94e2ae;
+  color: var(--new-price-color);
 }
 
 .book-old-price {
-  color: #e29494;
+  color: var(--old-price-color);
   text-decoration: line-through;
 }
 
