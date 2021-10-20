@@ -2,18 +2,21 @@
 <html lang="en">
 
 <head>
-	<title>BookPortal is changed by me</title>
-	<link rel="stylesheet" href="./css/styles.css">
+	<title>BookPortal</title>
+	<!-- <link rel="stylesheet" href="./css/styles_light.css"> -->
+	<link rel="stylesheet" href="./css/styles_dark.css">
+	<script src="scripts/javascript.js"></script>
 </head>
 
 <body>
-	<p>Delete P tag</p>
 	<div id="navbar">
 		<ul class="navbar-item">
 			<li><a href="#">BookPortal</a></li>
 			<li><a href="#">Каталог</a></li>
 			<li><a href="#">Моя бібліотека</a></li>
-			<li><input type="text" name="searchline" placeholder="Пошук"></li>
+			<li><input id="searchline" type="text" name="searchline" placeholder="Пошук"></li>
+			<li><input id="theme-switcher" type="checkbox" onchange="toggleTheme()"></li>
+			
 		</ul>
 		<ul class="navbar-item">
 			<li><a href="#">Вхід</a></li>
@@ -146,5 +149,7 @@
 
 	</div>
 </body>
-
+<footer>
+	Copyright 2018
+ </footer>
 </html>

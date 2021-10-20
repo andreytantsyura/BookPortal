@@ -1,7 +1,23 @@
 @charset "UTF-8";
 
-// @import url("/css/dark-theme-colors.scss");
-@import url("/css/light-theme-colors.css");
+// :root{
+//   --new-price-color: rgb(148, 226, 174);
+//   --old-price-color:rgb(226, 148, 148);
+//   --navbar-color: rgb(57, 101, 136);
+//   --nanbar-text-color: #edebff;
+//   --navbar-text-hover-color: rgb(250, 197, 117);
+//   --background-image: "../images/background2.jpg";
+//   --compilation-background-color: #9d9ab850;  
+// }
+
+
+$navbar-color: rgb(57, 101, 136);
+$nanbar-text-color: #edebff;
+$navbar-text-hover-color: rgb(250, 197, 117);
+$background-image: "../images/background2.jpg";
+$compilation-background-color: #9d9ab850;  
+$new-price-color: rgb(148, 226, 174);
+$old-price-color: rgb(226, 148, 148);
 
 /* общие семейство и цвет шрифта*/
 * {
@@ -13,7 +29,7 @@ body {
   margin: 0px;  /* сброс внешних отступов*/
   // background-color: #e6e6e6;  /* цвет фона страницы */
 
-  background-image: url($background-image);
+  background-image: url($background-imag);
   background-repeat: no-repeat;
   background-position: center;
   // background-size: 100%;
@@ -41,7 +57,6 @@ body {
 .navbar-item li{
   display: inline;
   padding-right: 15px;
-  // padding: 0 15px 0 0;
 }
 
 #navbar a {
@@ -56,10 +71,16 @@ body {
 	color: $navbar-text-hover-color;
 }
 
-#navbar input {
+#searchline{
   border-style: groove;
   background: url("../images/search.jpg") no-repeat right;
-} 
+}
+
+#toggle-theme {
+  border-radius: 2px;
+  border-color: $navbar-text-hover-color;
+  background-color: rgb(139, 139, 139) ;
+}
 
 /* раздел контента*/
 #content {
@@ -82,6 +103,7 @@ body {
   border-radius: 4px;
   border-width: 2px;
   box-shadow: 4px 2px 8px rgba(53, 53, 53, 0.192);
+  background-color: $compilation-background-color;
 }
 
 .compilation-horizontal-list{
@@ -133,9 +155,7 @@ a{
   padding-bottom: 15px;
   width: 299px;
   display: flex;
-  flex-wrap: wrap;
-
- 
+  flex-wrap: wrap; 
 }
 
 .preview-mini-desc {
@@ -147,6 +167,10 @@ a{
 }
 
 .book-old-price{
-  color: $testVar2; 
+  color: $old-price-color; 
   text-decoration: line-through;
+}
+
+#button-theme-mode{
+  size: 50px, 50px;
 }
